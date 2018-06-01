@@ -47,5 +47,10 @@ public class Mundos {
     public void setCreature(ArrayList<Criaturas> creature) {
         this.creature = creature;
     }
+
+    @Override
+    public String toString() {
+        return "" + nombre ;
+    }
     
 }

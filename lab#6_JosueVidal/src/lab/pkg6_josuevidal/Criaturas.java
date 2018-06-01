@@ -18,17 +18,19 @@ public class Criaturas {
     private int anos;
     private String region;
     private int vivos;
+    private int peso;
     ArrayList objetos = new ArrayList();
 
     public Criaturas() {
     }
 
-    public Criaturas(String raza, int energia, int anos, String region, int vivos) {
+    public Criaturas(String raza, int energia, int anos, String region, int vivos, int peso) {
         this.raza = raza;
         this.energia = energia;
         this.anos = anos;
         this.region = region;
         this.vivos = vivos;
+        this.peso = peso;
     }
 
     public String getRaza() {
@@ -79,9 +81,17 @@ public class Criaturas {
         this.objetos = objetos;
     }
 
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
     @Override
     public String toString() {
-        return "Criaturas{" + "raza=" + raza + ", energia=" + energia + ", anos=" + anos + ", region=" + region + ", vivos=" + vivos + ", objetos=" + objetos + '}';
+        return  raza;
     }
 
 }
