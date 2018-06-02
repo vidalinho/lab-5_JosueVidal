@@ -111,7 +111,7 @@ public class lab5_JosueVidal extends javax.swing.JFrame {
         });
         menu_popup.add(mi_eliminar);
 
-        mi2_agregar.setText("jMenuItem1");
+        mi2_agregar.setText("Agregar");
         mi2_agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mi2_agregarActionPerformed(evt);
@@ -119,7 +119,7 @@ public class lab5_JosueVidal extends javax.swing.JFrame {
         });
         menupopup.add(mi2_agregar);
 
-        mi2_modificar.setText("jMenuItem2");
+        mi2_modificar.setText("Modificar");
         mi2_modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mi2_modificarActionPerformed(evt);
@@ -127,7 +127,7 @@ public class lab5_JosueVidal extends javax.swing.JFrame {
         });
         menupopup.add(mi2_modificar);
 
-        mi2_eliminar.setText("jMenuItem3");
+        mi2_eliminar.setText("Eliminar");
         mi2_eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mi2_eliminarActionPerformed(evt);
@@ -328,26 +328,23 @@ public class lab5_JosueVidal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(tf_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(tf_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tf_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7)))
+                            .addComponent(jLabel2)
+                            .addComponent(tf_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(tf_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,7 +389,7 @@ public class lab5_JosueVidal extends javax.swing.JFrame {
                                 .addComponent(jButton1)))
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -521,18 +518,25 @@ public class lab5_JosueVidal extends javax.swing.JFrame {
     private void jl_criaturasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_criaturasMouseClicked
         // TODO add your handling code here:
         if (evt.isMetaDown()) {
-            menu_popup.show(evt.getComponent(), evt.getX(), evt.getY());
+            menupopup.show(evt.getComponent(), evt.getX(), evt.getY());
 
         }
     }//GEN-LAST:event_jl_criaturasMouseClicked
 
     private void mi2_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi2_agregarActionPerformed
-        // TODO add your handling code here:
-        DefaultListModel modeloo = (DefaultListModel) jl_criaturas.getModel();
-        String nom = JOptionPane.showInputDialog("Ingrese nombre");
-        int pes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el peso"));
+        // TODO add your handling code here:private String raza;
 
-        modeloo.addElement(new Mundos(nom, pes));
+        DefaultListModel modeloo = (DefaultListModel) jl_criaturas.getModel();
+
+        String a = JOptionPane.showInputDialog("Ingrese la raza");
+
+        int b = Integer.parseInt(JOptionPane.showInputDialog("Ingrese energia"));
+        int c = Integer.parseInt(JOptionPane.showInputDialog("Ingrese anos"));
+        String d = JOptionPane.showInputDialog("Ingrese la region");
+        int e = Integer.parseInt(JOptionPane.showInputDialog("Ingrese vivos"));
+        int f = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el peso"));
+
+        modeloo.addElement(new Criaturas(a, b, c, d, e, f));
     }//GEN-LAST:event_mi2_agregarActionPerformed
 
     private void mi2_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi2_modificarActionPerformed
